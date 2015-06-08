@@ -1,5 +1,3 @@
-var user = new UserModel();
-
 $(document).ready(function(){
 
 	var $editProfileForm = $("#edit-profile-2-2");
@@ -22,7 +20,8 @@ $(document).ready(function(){
 
 	var app = new App();
 	Backbone.history.start();
-
+	
+	var user = new UserModel();
 	$.get("https://tiny-pizza-server.herokuapp.com/collections/awg-profile/", function(data){
 		theId = data[0]._id;
 		user.set({
